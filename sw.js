@@ -27,30 +27,38 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9aa561a0cc36f5e60463.js"
+    "url": "webpack-runtime-b76a8af74a45b0c412d7.js"
   },
   {
     "url": "framework-c4b9952841844d9091bc.js"
   },
   {
-    "url": "styles.e1dc30a3601f3f545267.css"
+    "url": "styles.4c8d883a1836143b0df2.css"
   },
   {
-    "url": "app-e89d84c9b7a9693989dd.js"
+    "url": "app-a10e348098f97a33edc4.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9a971e1bcdea2dc8b8d1b0a2746a478b"
+    "revision": "fbbbe681ea9f904a5c3a2b7302c0b754"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-44e6c687a88026cfc124.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "996f4a8cb0d65ec732de5700ef51abdd"
   },
   {
     "url": "polyfill-c2e4e94a66c06c4d0f01.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "27cc4f8d0a85bf9f37be429d7a55e230"
+    "revision": "5c4bb62cbab0d07e2d77107b35cffae1"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -137,12 +145,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/itnasBlog`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-e89d84c9b7a9693989dd.js`))) {
+  if (!resources || !(await caches.match(`/itnasBlog/app-a10e348098f97a33edc4.js`))) {
     return await fetch(event.request)
   }
 
@@ -155,7 +163,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/itnasBlog/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
