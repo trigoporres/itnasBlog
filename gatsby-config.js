@@ -1,19 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Itnas blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Santiago Trigo Porres`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Lugar de aprendizaje de programación`,
+    siteUrl: `https://trigoporres.github.io/itnasBlog/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `trigooporres`,
     },
   },
   pathPrefix: `/itnasBlog`,
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-R2385EZSQ8", // Google Analytics / GA
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
