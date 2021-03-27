@@ -19,9 +19,9 @@ de experiencia ser junior? Pues creo que sí, para mí uno es junior,
 evidentemente al principio de tu carrera, pero también si cambias de trabajo o
 si empiezas en un proyecto nuevo del cual no tienes experiencia.
 
-Imaginemos que estoy en un proyecto basado en phyton durante 4 años y de repente
+Imaginemos que estoy en un proyecto basado en python durante 4 años y de repente
 cambio a un proyecto en JavaScript. Es un lenguaje nuevo con procesos de trabajo
-diferentes... Es cierto que esa experiencia en phyton otorgan unos conocimientos
+diferentes... Es cierto que esa experiencia en python otorgan unos conocimientos
 básicos de programación que se pueden llevar a JavaScript. Aun así es
 generalmente imposible tener el mismo rendimiento en ambos casos.
 
